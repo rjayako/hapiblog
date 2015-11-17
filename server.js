@@ -15,3 +15,9 @@ server.views({
 	},
 	path: './templates'
 });
+
+server.route(require('./lib/routes')); //bring in the routes
+
+server.start(function () {
+    console.log('Server running at:', server.info.uri);
+});
